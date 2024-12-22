@@ -253,10 +253,6 @@ def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = Fals
 	tr_error = neural_network.train(input_vectors[i], targets, iterations)
 	print("tr_error = {0}\n".format(tr_error)) ## DBPRINT
 	
-	for i in range(num):
-		tr_error = neural_network.train(input_vectors[i], targets, iterations)
-		print("tr_error = {0}\n".format(tr_error)) ## DBPRINT
-		
 	# ~ display_all()
 	if (show): show_all(tr_error)
 	
