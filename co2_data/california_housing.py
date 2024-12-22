@@ -17,19 +17,3 @@ def show_calif_hous_data(num):
 if __name__ == "__main__":
 	
 	show_calif_hous_data(25)
-
-	# ~ data = fetch_california_housing()
-	# ~ calf_hous_df = pd.DataFrame(data= data.data, columns=data.feature_names)    
-	# ~ print(calf_hous_df.head(15))
-
-### OPTIONAL:	train_test_split california housing data
-	# ~ x, y = fetch_california_housing(return_X_y=True)
-	# ~ print(x)
-	# ~ print(y)
-
-	# ~ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, random_state=0)
-
-	# ~ print("{0}".format(x_train))
-	# ~ print(x_test)
-	# ~ print(y_train)
-	# ~ print(y_test)
