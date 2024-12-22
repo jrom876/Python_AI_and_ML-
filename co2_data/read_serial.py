@@ -95,12 +95,8 @@ def get_CO2_value(ret = False):
 
 ### Initializing vectors and arrays ###	
 
-# ~ input_vectors = np.array([[0,0],[0,0],[0,0],[0,0],[0,0]])
-# ~ input_vectors = np.array([[0,0]])
-
 def init_iv_and_targets(num):
 	global input_vectors
-	# ~ input_vectors = np.array([[0,1.1]])	
 	input_vectors = np.array([[0,1.1]])		
 	global targets
 	targets = np.array([1])
@@ -157,7 +153,7 @@ def init_dot_products(num):
 ### Displaying and showing data plots ###	
 	
 def display_all():	
-	# ~ print("\n##############<<<<<|>>>>>##############") ## DBPRINT
+	# ~ print("\n##############<<<<<~>>>>>##############") ## DBPRINT
 	# ~ print("\nCurrent value of all network vectors and arrays\n") ## DBPRINT
 	print ("input_vectors = {0}".format(input_vectors))
 	print ("\ntargets = {0}".format(targets))
@@ -166,7 +162,7 @@ def display_all():
 	# ~ print ("predictions = {0}".format(pred))
 	# ~ print ("errors = {0}".format(errors_array))
 	print ("dot_product_1 = {0}".format(dot_product_1))
-	print("\n##############<<<<<^>>>>>###############\n") ## DBPRINT
+	print("\n##############<<<<<~>>>>>###############\n") ## DBPRINT
 		
 def show_all(train_error):	
 	plt.plot(train_error)
@@ -204,7 +200,7 @@ def computeDotProduct_array(num, iv, wt):
 #######################################
 ### https://numpy.org/doc/stable/reference/generated/numpy.append.html
 
-### Test with multiple input vectors ###
+### run_multiple_tests: Run tests with multiple input vectors ###
 ### This ties everything together, and will be used as the MAIN function call.
 
 def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = False):
@@ -226,28 +222,19 @@ def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = Fals
 		input_vectors[i][0] = next(obj)
 		print("iv = {0}:{1}".format(input_vectors[i][0], input_vectors[i][1])) ## DBPRINT
 		
-	# ~ input_vector = ([get_CO2_value(False), 1])
-	# ~ print("input_vector = {0}".format(input_vector))
-	# ~ get_CO2_value(False)
-	# ~ print(cc)
-	
-		# ~ computeDotProduct_1(input_vectors[i], weights_1[i]) 
 		dot_product_1[i] = dot_product(input_vectors[i], weights_1[i])
-		# ~ computeDotProduct_2()  
 		prediction = nn.make_prediction(input_vectors[i], weights_1[i], bias)
 		pred = np.insert(pred, i, prediction)
-		# ~ pred = np.append(pred,prediction)
 		print ("pred = {0}".format(pred))
 		# ~ print(f"The prediction result is: {prediction}") ## DBPRINT
-		# ~ target = 1
 		err = nn.get_Mean_squared_error(prediction, targets[i])
 		errors_array = np.insert(errors_array, i, err)
 		print ("errors_array = {0}".format(errors_array))
 
 		prediction = nn.update_prediction(input_vectors[i], 
-										nn.update_weights(weights_1[i], 
-										nn.get_derivative(prediction, targets[i])), 
-										bias)
+						nn.update_weights(weights_1[i], 
+						nn.get_derivative(prediction, targets[i])), 
+						bias)
 		derror_dprediction = 2 * (prediction - targets[i])
 		layer_1 = np.dot(input_vectors[i], weights_1[i]) + bias
 		dprediction_dlayer1 = nn.sigmoid_deriv(layer_1)
@@ -267,16 +254,15 @@ def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = Fals
 	print("tr_error = {0}\n".format(tr_error)) ## DBPRINT
 	
 	for i in range(num):
-		## ~ pred = neural_network.predict(input_vectors[i][0])
 		tr_error = neural_network.train(input_vectors[i], targets, iterations)
 		print("tr_error = {0}\n".format(tr_error)) ## DBPRINT
-		# ~ print("pred = {0}\ttr_error = {1}\n".format(predictions, tr_error)) ## DBPRINT
 		
 	# ~ display_all()
 	if (show): show_all(tr_error)
 	
 	### DEPRECATED: calling the plt.plot options 
-	### All plt.plot functions below are called by show_all()
+	### All plt.plot functions below are called by show_all(tr_error)
+
 	## ~ plt.plot(tr_error)
 	## ~ plt.xlabel("Iterations")
 	## ~ plt.ylabel("Error for all training instances")
@@ -328,19 +314,6 @@ def get_second_indexes_mult(iv_1, wt_1):
 
 # Driver program
 if __name__ == "__main__":
-	## Use this for yield keyword calls
-	# ~ obj = get_CO2_value(False)
-	# ~ print(type(obj))
-	# ~ print(next(obj))
-	# ~ print(next(obj))
-	# ~ print(next(obj))
-
-	# ~ bias =	np.array([-0.5]) ## DBTEST
-	# ~ error  = 0
-	# ~ weights_1 =	np.array([1.01, -0.01]) ## DBTEST
-	# ~ count = 0
-	# ~ targets = np.array([1, 1, 1]) ## DBTEST
-	# ~ targets = np.array([1, 1, 1, 1, 1, 1]) ## DBTEST
     
 ########################################
 ### Test with multiple input vectors ###
@@ -385,48 +358,6 @@ if __name__ == "__main__":
 ### END OF MAIN ###	
 ###################
 
-	
-'''
-	input_vectors = np.array([[0,0],[0,0],[0,0],[0,0],[0,0]])
-	for i in range(5):
-		# ~ input_vectors[i] = [next(obj), 0]
-		input_vectors[i][0] = next(obj)
-		print("iv = {0}:{1}".format(input_vectors[i][0], input_vectors[i][1]))
-	
-	# ~ input_vector = ([get_CO2_value(), 1])
-	# ~ print("input_vector = {0}".format(input_vector))
-	# ~ get_CO2_value()
-	# ~ print(cc)
-	
-		computeDotProduct_1()    
-		# ~ computeDotProduct_2()  
-		prediction = nn.make_prediction(input_vectors, weights_1, bias)
-		print(f"The prediction result is: {prediction}")
-		target = 1
-		nn.get_Mean_squared_error(prediction, targets[i])
-
-		# ~ prediction = nn.update_prediction(input_vectors, nn.update_weights(weights_1, nn.get_derivative(prediction, target)), bias)
-		derror_dprediction = 2 * (prediction - targets[i])
-		layer_1 = np.dot(input_vectors, weights_1) + bias
-		dprediction_dlayer1 = nn.sigmoid_deriv(layer_1)
-		dlayer1_dbias = 1
-
-		derror_dbias = nn.get_derror_dbias(derror_dprediction,dprediction_dlayer1,dlayer1_dbias)
-
-	print("\nEntering the class")
-	learning_rate = 0.01
-	neural_network = nn.NeuralNetwork(learning_rate)
-	pred = np.array([[0],[0],[0],[0],[0]])
-	tr_error = np.array([[0],[0],[0],[0],[0]])
-	for i in range(len(pred)):
-		# ~ pred = neural_network.predict(input_vectors[i][0])
-		tr_error = neural_network.train(input_vectors[i], targets, 500)
-	# ~ plt.plot(training_error)
-	# ~ plt.xlabel("Iterations")
-	# ~ plt.ylabel("Error for all training instances")
-	# ~ plt.savefig("cumulative_error.png")
-    # ~ plt.show()
-'''
 
 ### SAVE THIS: Very Useful!! ###
    
@@ -493,4 +424,4 @@ while True:
 			# ~ ## return (result)
 			# ~ yield (result)
 			
-### END OF SAVE THIS: Parser Example snippet ###
+### END OF SAVE THIS ###
