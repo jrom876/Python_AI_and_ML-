@@ -1,5 +1,5 @@
 # Python_AI_and_ML-
-This contains the code to update and predict CO2 sensor readings using Artificial Intelligence, Machine Learning, and Neural Networks.
+This contains the code to read and predict CO2 sensor data using Artificial Intelligence, Machine Learning, and Neural Networks.
 
 It uses pandas, matplotlib, numpy, sklearn, and various other Python libraries.
 
