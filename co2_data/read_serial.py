@@ -25,7 +25,6 @@ from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
 import serial
-import neural_network as nn
 
 ## This reads the serial data being streamed by the Arduino on port ttyUSB0
 
