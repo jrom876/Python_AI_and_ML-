@@ -14,9 +14,6 @@ import matplotlib.pyplot as plt
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 
-
-##########################################
-
 ##########################################
 ##########################################
 class NeuralNetwork:
@@ -152,11 +149,6 @@ def update_prediction(input_vector, weights_1, bias):
     error = (prediction - targets) ** 2
     print(f"New Prediction: {prediction}; Error: {error}")
     return prediction
-
-# ~ derror_dprediction = 2 * (prediction - target)
-# ~ layer_1 = np.dot(input_vector, weights_1) + bias
-# ~ dprediction_dlayer1 = sigmoid_deriv(layer_1)
-# ~ dlayer1_dbias = 1
 
 def sigmoid_deriv(x):
     return sigmoid(x) * (1-sigmoid(x))
