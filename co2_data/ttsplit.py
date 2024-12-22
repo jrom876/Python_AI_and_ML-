@@ -45,10 +45,10 @@ chous.show_calif_hous_data(25)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.4, random_state=0)
 # ~ x_train, x_test, y_train, y_test = train_test_split(x, y, 
-													# ~ test_size=4, 
-													# ~ random_state=0,
-													# ~ stratify=y,
-													# ~ shuffle=True)
+							# ~ test_size=4, 
+							# ~ random_state=0,
+							# ~ stratify=y,
+							# ~ shuffle=True)
 
 print(x_train)
 print(x_test)
