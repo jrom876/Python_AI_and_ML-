@@ -2,7 +2,7 @@
 ## https://www.openml.org/search?type=data&sort=runs&id=151&status=active
 ## https://towardsdatascience.com/quantile-regression-from-linear-models-to-trees-to-deep-learning-af3738b527c3
 
-## Histogram Based Gradient Boosting == HBGT
+## Histogram Gradient Boosting Tree == HBGT
 
 from sklearn.datasets import fetch_openml
 
