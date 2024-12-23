@@ -275,12 +275,12 @@ def get_mean(my_array):
 	return mean
 
 def get_median(my_array):
-	mean = np.median(my_array)
+	median = np.median(my_array)
 	print("median = {0}".format(median))
 	return median
 
 def get_mode(my_array):	## get most common number
-	mean = stats.mode(my_array)
+	mode = stats.mode(my_array)
 	print("mode = {0}".format(mode))
 	return mode
 
