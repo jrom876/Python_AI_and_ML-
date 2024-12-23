@@ -267,7 +267,7 @@ def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = Fals
 
 ############################################
 ### Neural Network, ML, and AI functions ###
-### https://www.w3schools.com/python/python_ml_standard_deviation.asp
+### https://www.w3schools.com/python/python_ml_standard_deviation.asp ###
 
 def get_mean(my_array):
 	mean = np.mean(my_array)
