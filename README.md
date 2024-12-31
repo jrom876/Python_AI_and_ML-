@@ -6,5 +6,3 @@ The main CO2 file -- co2_data/read_serial.py -- contains code to read CO2 sensor
 TODO:  Finish the nRF24L01 handler for an RPi 5 B+ platform; I am using the Arduino serial port data for now.
 
 TODO:  Include the Arduino K30 code and hardware requirements.
-
-This is part of my AI, ML, and Neural Network projects.
