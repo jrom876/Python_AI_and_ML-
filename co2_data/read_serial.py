@@ -56,12 +56,6 @@ ser = serial.Serial(
 bias =	np.array([-0.5]) ## DBTEST
 error  = 0
 count = 0	
-
-### DEPRECATED: hard coding the weights_1 vector 
-### weights_1 is now initialized by init_weights(num)
-# ~ weights_1 =	np.array([[1.01, -0.01],
-			# ~ [1.01, -0.01],
-			# ~ [1.01, -0.01],]) ## DBTEST
 	
 ################################################################
 ### Extracts CO2 value from serial.Serial('/dev/ttyUSB0', 9600) 
