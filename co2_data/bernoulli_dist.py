@@ -29,6 +29,7 @@ def bernoulli_trial(n, k):
 p = 1/70
 # ~ q = 69/70
 q = 1 - p
+# ~ get_binomial_coeff(6, 5)
 
 # Driver program
 if __name__ == "__main__":
