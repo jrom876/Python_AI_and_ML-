@@ -5,7 +5,7 @@
 ## https://scikit-learn.org/stable/index.html
 
 ## https://stackoverflow.com/questions/16077912/python-serial-how-to-use-the-read-or-readline-function-to-read-more-than-1-char
-##** https://github.com/microsoft/ML-For-Beginners
+## https://github.com/microsoft/ML-For-Beginners
 
 ## https://realpython.com/python-ai-neural-network/
 ## https://realpython.com/python-zip-function/
@@ -60,8 +60,8 @@ count = 0
 ### DEPRECATED: hard coding the weights_1 vector 
 ### weights_1 is now initialized by init_weights(num)
 # ~ weights_1 =	np.array([[1.01, -0.01],
-					# ~ [1.01, -0.01],
-					# ~ [1.01, -0.01],]) ## DBTEST
+			# ~ [1.01, -0.01],
+			# ~ [1.01, -0.01],]) ## DBTEST
 	
 ################################################################
 ### Extracts CO2 value from serial.Serial('/dev/ttyUSB0', 9600) 
@@ -266,8 +266,6 @@ def run_multiple_tests(num, learning_rate = 0.01, iterations = 1000, show = Fals
 		
 
 ############################################
-### Neural Network, ML, and AI functions ###
-### https://www.w3schools.com/python/python_ml_standard_deviation.asp ###
 
 def get_mean(my_array):
 	mean = np.mean(my_array)
