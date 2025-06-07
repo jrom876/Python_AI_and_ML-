@@ -177,6 +177,7 @@ def computeDotProduct_1(iv, wt):
 			
 def dot_product(x_vector, y_vector):
     # Computing the dot product of input_vector and weights_1
+    # using a python comprehension instead of numpy
 	if len(x_vector) != len(y_vector):
 		raise ValueError("Vectors must have equal sizes")
 	dot_product_1 = sum(x * y for x, y in zip(x_vector, y_vector))
