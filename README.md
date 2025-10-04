@@ -11,7 +11,8 @@ Words of Wisdom:
 
 "I've seen a very typical pattern of errors among interns and new grads:
 
-    Their changes are much too large - hundreds of lines all sent for review at once, rather than splitting up the changes into separable units when possible.
+    Their changes are much too large - hundreds of lines all sent for review at once, 
+        rather than splitting up the changes into separable units when possible.
     They leave in commented-out code and debug statements.
     They don't use functions to organize their code logically.
     They use magic numbers without comments.
